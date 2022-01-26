@@ -1,0 +1,167 @@
+:root {
+    --strong-cyan: hsl(172, 67%, 45%);
+    --darker-cyan: hsl(183, 100%, 15%);
+    --dark-gray-cyan1: hsl(186, 14%, 43%);
+    --dark-gray-cyan2: hsl(184, 14%, 56%);
+    --light-gray-cyan1: hsl(185, 41%, 84%);
+    --light-gray-cyan2: hsl(189, 41%, 97%);
+    --white: hsl(0, 0%, 100%);
+}
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    background-color: var(--light-gray-cyan1);
+    font-family: 'Space Mono', monospace;
+    display: grid;
+    place-items: center;
+}
+
+main {
+    width: 100%;
+    display: grid;
+}
+
+main > img {
+    margin: auto;
+    margin-bottom: 5rem;
+}
+
+main .card {
+    margin: auto;
+    width: min(50rem, 95%);
+    background-color: var(--white);
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(21rem, 1fr));
+    column-gap: 1rem;
+    row-gap: 2rem;
+    border-radius: .5rem;
+}
+
+.card .costs {
+    /* background-color:hsl(172, 67%, 45%); */
+    display: grid;
+    gap: 1rem;
+}
+
+.costs h3 {
+    color: var(--dark-gray-cyan1);
+}
+
+.costs input[type="text"] {
+    width: 100%;
+    background-color: var(--light-gray-cyan2);
+    color: var(--darker-cyan);
+    font-size: 24px;
+    font-weight: 700;
+    text-align: right;
+    border: 0;
+    border-radius: .2rem;
+    padding: .5rem;
+    margin-top: .1rem;
+}
+
+.costs--bill > div, .costs--people > div {
+    position: relative;
+    width: 100%;
+}
+
+.costs--bill > div::before {
+    position: absolute;
+    content: url("../images/icon-dollar.svg");
+    left: .5rem;
+    top: 30%;
+}
+
+.costs--people > div::before {
+    position: absolute;
+    content: url("../images/icon-person.svg");
+    left: .5rem;
+    top: 30%;
+}
+
+.costs h3 {
+    margin-bottom: .25rem;
+}
+
+.costs--tip .tips {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(6rem, 1fr));
+    gap: 1rem;
+}
+
+.costs--tip .tips > p {
+    background-color: var(--darker-cyan);
+    color: var(--white);
+    padding: .5rem 0;
+    text-align: center;
+    border-radius: .5rem;
+    cursor: pointer;
+}
+
+.costs--tip .tips > *:hover, .costs--tip .tips > p:last-of-type:hover {
+    background-color: var(--strong-cyan);
+}
+
+.costs--tip .tips > p:last-of-type {
+    background-color: var(--light-gray-cyan2);
+    color: var(--darker-cyan);
+    font-weight: 700;
+}
+
+.card .total {
+    position: relative;
+    background-color: var(--darker-cyan);
+    color: white;
+    /* display: grid; */
+    border-radius: .5rem;
+    padding: 2rem 2rem 5rem 1rem;
+}
+
+.total > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.total > div p {
+    font-size: 1rem;
+    color: var(--white);
+    margin-bottom: 2rem;
+}
+
+.total > div p > span {
+    color: var(--light-gray-cyan1);
+    font-size: .75rem;
+}
+
+.total > div p + p {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--strong-cyan);
+}
+
+button {
+    position: absolute;
+    width: 90%;
+    background-color: var(--strong-cyan);
+    color: var(--darker-cyan);
+    justify-self: center;
+    font-weight: 700;
+    border: 0;
+    border-radius: .3rem;
+    padding: .5rem 0;
+    bottom: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    text-align: center;
+}

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Tip calculator app</title>
+</head>
+
+<body>
+
+  <main>
+    <img src="./images/logo.svg" alt="logo">
+
+    <div class="card">
+      <div class="costs">
+        <div class="costs--bill">
+          <h3>Bill</h3>
+          <div>
+            <input type="text" name="bill" id="bill" placeholder="0">
+          </div>
+        </div>
+        
+        <div class="costs--tip">
+          <h3>Select Tip %</h3>
+          <div class="tips">
+            <p>5%</p>
+            <p>10%</p>
+            <p>15%</p>
+            <p>25%</p>
+            <p>50%</p>
+            <p>Custom</p>
+          </div>
+        </div>
+      
+        <div class="costs--people">
+          <h3>Number of People</h3>
+          <div>
+            <input type="text" name="people" id="people" placeholder="0">
+          </div>
+        </div>
+      </div>
+  
+  
+      <div class="total">
+        <div>
+          <p>Tip Amount <br><span>/ person</span></p>
+          <p>$4.27</p>
+        </div>
+  
+        <div>
+          <p>Total <br><span>/ person</span></p>
+          <p>$32.79</p>
+        </div>
+  
+        <button class="reset">RESET</button>
+      </div>
+    </div>
+  </main>
+
+  <script src="./index.js"></script>
+</body>
+</html>
