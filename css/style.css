@@ -26,6 +26,7 @@ body {
 main {
     width: 100%;
     display: grid;
+    padding: 2rem 0;
 }
 
 main > img {
@@ -39,10 +40,17 @@ main .card {
     background-color: var(--white);
     padding: 2rem;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(21rem, 1fr));
-    column-gap: 1rem;
+    /* grid-template-columns: repeat(auto-fit, minmax(21rem, 1fr)); */
+    /* column-gap: 1rem; */
     row-gap: 2rem;
     border-radius: .5rem;
+}
+
+@media screen and (min-width: 760px) {
+    main .card {
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 1rem;
+    }
 }
 
 .card .costs {
@@ -110,6 +118,10 @@ main .card {
     background-color: var(--strong-cyan);
 }
 
+.costs--tip .tips .active-tip {
+    background-color: var(--strong-cyan);
+}
+
 .costs--tip .tips > p:last-of-type {
     background-color: var(--light-gray-cyan2);
     color: var(--darker-cyan);
@@ -120,7 +132,8 @@ main .card {
     position: relative;
     background-color: var(--darker-cyan);
     color: white;
-    /* display: grid; */
+    display: grid;
+    gap: 2rem;
     border-radius: .5rem;
     padding: 2rem 2rem 5rem 1rem;
 }
@@ -131,10 +144,26 @@ main .card {
     align-items: center;
 }
 
+@media screen and (max-width: 350px) {
+    main .card {
+        padding: 1rem .75rem;
+    }
+
+    .total {
+        gap: 1rem;
+    }
+
+    .total > div {
+        flex-direction: column;
+        align-items: start;
+        justify-content: center;
+    }
+}
+
 .total > div p {
     font-size: 1rem;
     color: var(--white);
-    margin-bottom: 2rem;
+    /* margin-bottom: 2rem; */
 }
 
 .total > div p > span {
